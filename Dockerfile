@@ -1,5 +1,5 @@
 # Dockerfile
 FROM alpine:3.14.2
-COPY minectl \
+COPY helloween \
 	/usr/bin/helloween
 ENTRYPOINT ["/usr/bin/helloween"]

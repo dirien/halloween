@@ -1,4 +1,4 @@
-project_name: halloween.github
+project_name: halloween
 snapshot:
   name_template: '{{ .Tag }}-SNAPSHOT'
 before:
