@@ -33,3 +33,13 @@ dockers:
       - --label=org.opencontainers.image.version={{ .Version }}
       - --label=org.opencontainers.image.title={{ .ProjectName }}
       - --label=org.opencontainers.image.source=https://github.com/dirien/{{ .ProjectName }}
+
+docker_manifests:
+  - name_template: 'ghcr.io/dirien/halloween:{{ .Tag }}'
+    image_templates:
+      - 'ghcr.io/dirien/halloween:{{ .Version }}-amd64'
+      - 'ghcr.io/dirien/halloween:{{ .Version }}-arm64'
+  - name_template: 'ghcr.io/dirien/halloween:latest'
+    image_templates:
+      - 'ghcr.io/dirien/halloween:{{ .Version }}-amd64'
+      - 'ghcr.io/dirien/halloween:{{ .Version }}-arm64'
